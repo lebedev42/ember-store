@@ -1,0 +1,33 @@
+<table class="table is-fullwidth">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Products</th>
+            <th class="has-text-centered">Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each orders as |order|}}
+                <tr>
+                    <td>
+                        <span>Name: </span><i>{{order.customer_name}}</i><br/>
+                        <span>Phone: </span><i>{{order.customer_phone}}</i>
+                    </td>
+                    <td>
+                        {{#each order.products as |product|}}
+                            <ul class="order-list_products">
+                                <li>
+                                    <span>Product: </span><i>{{product.name}}</i><br/>
+                                    <span>Quantity: </span><i>{{product.order_quantity}}</i>
+                                </li>
+                            </ul>
+                            <br/>
+                        {{/each}}
+                    </td>
+                    <td class="has-text-centered">
+                        <strong>${{order.total_price}}</strong>
+                    </td>
+                </tr>
+        {{/each}}
+    </tbody>
+</table>

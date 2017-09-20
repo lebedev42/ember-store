@@ -1,0 +1,19 @@
+<section class="hero is-info">
+    <div class="hero-body">
+        <div class="container">
+            <p class="title">
+                Orders List
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {{#if model}}
+            {{order-items-list orders=model}}
+        {{else}}
+            <h1>Order List is Empty</h1>
+        {{/if}}
+    </div>
+</section>

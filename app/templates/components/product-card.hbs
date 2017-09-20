@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            {{#if product.available_quantity}}
+                <span class="tag is-info card-label">{{product.available_quantity}} available</span>
+            {{else}}
+                <span class="tag is-danger card-label">No available</span>
+            {{/if}}
+            <img src={{product.img_src}} alt="Image">
+        </figure>
+    </div>
+    <div class="card-content">
+        <div class="content is-clearfix">
+            <div>
+                <h2>{{product.name}}</h2>
+                <p>{{product.description}}</p>
+            </div>
+            <div class="card-content_price">
+                <h5>Price: <strong>${{product.price}}</strong></h5>
+            </div>
+            <div>
+                <button class="button is-success" 
+                disabled={{if product.available_quantity false true}} 
+                {{action 'addToCart' product.id}}>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

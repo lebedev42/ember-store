@@ -1,0 +1,22 @@
+{{cart-header-block isFilled=isFilled}}
+
+{{#if isFilled}} 
+    <section class="section">
+        <div class="container">
+            {{cart-items-list products=model.products}}
+            <hr>
+            <div class="is-pulled-left">
+                <h1 class="title">Total: ${{model.total}}</h1>
+            </div>
+        </div>
+    </section>
+
+    {{cart-order-form clearCart=(action "clearCart") createOrder=(action "createOrder")}}
+
+{{else}} 
+    <section class="section">
+        <div class="container">
+            Return to {{#link-to 'products'}}Products{{/link-to}}
+        </div>
+    </section>
+{{/if}} 

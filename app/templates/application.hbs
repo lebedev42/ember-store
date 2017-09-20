@@ -1,0 +1,40 @@
+<div class="wrapper">
+
+    <nav class="navbar">
+        <div class="container is-flex-touch">
+            <div class="navbar-item is-flex-touch">
+                {{#link-to 'products'}}
+                    <h1>Ember Store</h1>
+                {{/link-to}} 
+            </div>
+            <div class="navbar-item is-flex-touch">
+                {{#link-to 'orders'}}
+                    <h1>Orders List</h1>
+                {{/link-to}} 
+            </div>
+            
+            {{cart-button cart=model}}
+        </div>
+    </nav> 
+
+    <div class="main-content">
+        {{outlet}}
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Ember Store</strong> by <a href="https://github.com/lebedev42">Ilya L</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+                </p>
+                <p>
+                    <a class="icon" href="https://github.com/lebedev42">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</div>

@@ -1,0 +1,11 @@
+{{products-header-block}}
+
+<section class="section">
+    <div class="container">
+        <div class="maingrid">
+            {{#each model as |product|}}
+                {{product-card product=product addToCart=(action "addToCart")}}
+            {{/each}}
+        </div>
+    </div>
+</section>
