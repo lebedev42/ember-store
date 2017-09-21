@@ -2,6 +2,8 @@
 
 This is a simple store on Ember.js, with uses remote API on [Ruby on Rails](https://github.com/lebedev42/rails-api-store).
 
+Demo app available on Heroku - [https://ember-store-client.herokuapp.com/](https://ember-store-client.herokuapp.com/).
+
 ## Installation
 
 * `git clone <repository-url>` this repository
