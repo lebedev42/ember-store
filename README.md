@@ -1,6 +1,6 @@
 # Ember Store Client
 
-This is a simple store on Ember.js, with uses remote API on Ruby on Rails.
+This is a simple store on Ember.js, with uses remote API on [Ruby on Rails](https://github.com/lebedev42/rails-api-store).
 
 ## Installation
 
